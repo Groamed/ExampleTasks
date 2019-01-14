@@ -10,8 +10,12 @@ function objSort(arr) {
         if (!isNotNull) {
             arr.forEach(el => {
                 delete el[key]
-            });
+            })
         }
         isNotNull = false
     }
+    return arr
 }
+console.log(objSort([{ a: 1, b: 1 }, { a: 1, b: 1 }, { a: 1, b: 1 }]))
+console.log(objSort([{ a: null, b: 1 }, { a: null, b: 1 }, { a: 1, b: 1 }]))
+console.log(objSort([{ a: null, b: 1 }, { a: null, b: 1 }, { a: null, b: 1 }]))
