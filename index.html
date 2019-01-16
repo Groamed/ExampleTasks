@@ -9,9 +9,7 @@
 </head>
 
 <body>
-    <input type="file" class="file">
-    <input type="button" onclick="convertToBase64(document.querySelector('.file').files[0])" value="Строка">
-    <img class="img">
+    <input type="file" class="file" onchange="startConv(this.files)" multiple>
     <script src="base64Converter.js"></script>
 </body>
 
